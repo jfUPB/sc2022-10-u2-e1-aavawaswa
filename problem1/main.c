@@ -36,13 +36,14 @@ void printArray(struct array *parr)
 
 void getArray(struct array *parr)
 {
-    //leer el tamaño del arreglo, ej7
+    //leer el arreglo y su tamaño, ej7
     //crear el vector en el HeAP
+    
 }
 
 void arrayCommon(struct array *arrIn1, struct array *arrIn2, struct array *arrOut)
 {
-    //leer cada elemento del arreglo
+    //leer cada elemento de los arreglo y compararlos
 }
 
 void freeMemory(struct array *arr1, struct array *arr2, struct array *arr3)
