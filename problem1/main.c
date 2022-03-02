@@ -38,7 +38,6 @@ void getArray(struct array *parr)
 {
     //leer el arreglo y su tamaño, ej7
     //crear el vector en el HeAP
-    
 }
 
 void arrayCommon(struct array *arrIn1, struct array *arrIn2, struct array *arrOut)
