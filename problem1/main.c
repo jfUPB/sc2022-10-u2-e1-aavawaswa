@@ -37,8 +37,7 @@ void printArray(struct array *parr)
 void getArray(struct array *parr)
 {
     //leer el tamaño del arreglo, ej7
-
-    //crear el vector en el heap
+    //crear el vector en el HeAP
 }
 
 void arrayCommon(struct array *arrIn1, struct array *arrIn2, struct array *arrOut)
@@ -132,4 +131,3 @@ int main(void)
 
     return EXIT_SUCCESS;
 }
-//test text 
