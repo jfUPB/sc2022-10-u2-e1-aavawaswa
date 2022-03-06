@@ -36,18 +36,18 @@ void printArray(struct array *parr)
 
 void getArray(struct array *parr)
 {
-    //leer el arreglo y su tamaño, ej7//
-    char age[7];
-    printf("How old are you? ");
-    if (fgets(age, 7, stdin) != NULL)
+    int arrS; 
+    scanf("%d", &arrS);
+    parr->size = arrS; 
+
+    parr->pdata = malloc(sizeof(int) * parr->size); 
+
+    for (int i = 0; i < arrS; i++)
     {
-        age[strlen(age) -1 ] = 0;
-        printf("I am %s years old\n", age);
+        int num;
+        scanf("%d", &num);
+        parr->pdata[i] = num;
     }
-    for(u_int8_t i = 0; i < strlen(age);i++){
-        printf("age[%d]: %c\n",i,age[i]);
-    }
-    //crear el vector en el HeAP
 }
 
 void arrayCommon(struct array *arrIn1, struct array *arrIn2, struct array *arrOut)
