@@ -52,7 +52,37 @@ void getArray(struct array *parr)
 
 void arrayCommon(struct array *arrIn1, struct array *arrIn2, struct array *arrOut)
 {
-    //leer cada elemento de los arreglo y compararlos
+    arrOut->pdata = malloc(sizeof(int));
+    int arrS = 0;
+   
+    for (int i = 0; i < arrIn1->size; i++)
+    {
+        for(int j= 0; j<arrIn2->size; j++)
+
+            if (*(arrIn1->pdata+i) == *(arrIn2->pdata+j))
+            {
+            
+                int bool = 0;
+                for (int k = 0; k < arrS; k++)
+                {
+                    if (*(arrOut->pdata + k) == *(arrIn1 -> pdata + i))
+                    {
+                        bool = 1; 
+                    }
+                }
+
+                if (bool != 1)
+                {
+                    *(arrOut->pdata + arrS) = *(arrIn1->pdata + i);
+                        arrS++;         
+                }
+
+                bool = 0; 
+            }      
+    }
+
+    arrOut->size = arrS;
+    arrOut->pdata = realloc(arrOut->pdata, sizeof(int) * arrS);
 }
 
 void freeMemory(struct array *arr1, struct array *arr2, struct array *arr3)
@@ -142,4 +172,4 @@ int main(void)
     return EXIT_SUCCESS;
 }
 
-//test memoria nueva
+
